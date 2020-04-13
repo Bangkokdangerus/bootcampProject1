@@ -1,8 +1,9 @@
+<!-- Site currenly displays weather info about london, will update with querey builder  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>New York Times Search</title>
+  <title>Daily Weather Memes</title>
   <!-- Bootstrap CSS CDN  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
   <!-- Font Awesome CSS Icons (For cool glyphicons) -->
@@ -21,7 +22,7 @@
   <!-- Main Bootstrap Search -->
   <div class="container">
     <!-- Jumbotron for Title -->
-    <div class="jumbotron" style="background-color: #20315A ; color: white;">
+    <div class="jumbotron" style="background-color: rgb(31, 98, 255) ; color: rgb(242, 255, 172);">
       <h1 class="text-center">
         <strong>
           <i class="fa fa-newspaper-p"></i> Daily Weather Memes</strong>
@@ -70,7 +71,19 @@
         </div>
       </div>
     </div>
-    <!-- Footer Region -->
+    <!-- Display results of json search-->
+    <div class="card-header">
+        <strong id="result"> Weather in Your Area</strong>
+       
+        
+      
+      </div>
+
+    <div> <strong id="resultWeather"> Weather in Your Area</strong>
+    </div>
+    <div> <strong id="resultMain"> Weather in Your Area</strong></div>
+    <div>  <strong id="resultWind"> Weather in Your Area</strong></div>
+        <!-- Footer Region -->
     <div class="row">
       <div class="col-sm-12">
         <!-- Line Break followed by closing -->
@@ -86,7 +99,8 @@
   <!-- jQuery JS -->
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
   <!-- Code to the JavaScript File -->
-  <script src="weatherScript.js.js"></script>
+  <script src="weatherScript.js"></script>
 </body>
 </html>
