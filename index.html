@@ -41,7 +41,7 @@
               <!-- Here we create the text box for capturing the search term-->
               <div class="form-group">
                 <label for="search">Search Term:</label>
-                <input type="text" class="form-control" id="searchTerm">
+                <input type="text" class="form-control" id="autocomplete">
               </div>
               <!-- Here we have our final submit button -->
               <button type="submit" class="btn btn-default" id="run-search" onclick="updateLoc(document.getElementById('searchTerm').value)">
@@ -93,6 +93,7 @@
   <!-- jQuery JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRxLWs_9kf0pmGCMignxgNZrzPb5lxft4&libraries=places"></script>"
 
   <!-- Code to the JavaScript File -->
   <script src="weatherScript.js"></script>
