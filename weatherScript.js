@@ -1,5 +1,10 @@
 // BangkokDangerus- scrapped all NYT code in favor of simple ajax to get api working will build URL builder next 
-
+var input = document.getElementById('autocomplete');
+      var autocomplete = new google.maps.places.Autocomplete(input,{types: ['(cities)']});
+      google.maps.event.addListener(autocomplete, 'place_changed', function(){
+         var place = autocomplete.getPlace();
+         console.log(response);
+      })
 
 var finalLoc = "London,uk";
 console.log(document.getElementById("result").innerHTML);
