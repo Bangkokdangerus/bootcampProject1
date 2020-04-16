@@ -16,7 +16,7 @@ function loadLocation() {
         // Sets the weather result div text to the weather description
         $("#resultWeather").text(data.weather[0].description);
         // Sets main result text to the temperature
-        $("#resultMain").text(((data.main.temp - 273.15) * 9/5 + 32).toFixed(2) + " ℉");
+        $("#resultMain").text(((data.main.temp - 273.15) * 9/5 + 32).toFixed(2) + " °F");
         // Sets wind result text to the wind speed
         $("#resultWind").text(data.wind.speed + " MPH");
         // Shows response
