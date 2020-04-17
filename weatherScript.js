@@ -39,9 +39,8 @@ function loadLocation(Location) {
       // Set one second delay on second API to give the first API time to update after the search
       setTimeout(() => {  
         $.ajax({
-          url: "https://api.giphy.com/v1/gifs/search?api_key=fbIf1ckwS6OC3tiJr1DgcpOH3SHQcgT1&limit=1&offset=0&rating=G&lang=en&q=" + $("#resultWeather").text().trim().replace(/ /g,''),
+          url: "https://api.giphy.com/v1/gifs/search?api_key=fbIf1ckwS6OC3tiJr1DgcpOH3SHQcgT1&limit=1&offset=0&rating=G&lang=en&q=" + $("#resultWeather").text().trim().replace(/\s+/g, '-'),
         }).done(function(gifTest) {
-          console.log("https://api.giphy.com/v1/gifs/search?api_key=fbIf1ckwS6OC3tiJr1DgcpOH3SHQcgT1&limit=1&offset=0&rating=G&lang=en&q=" + $("#resultWeather").text().trim().replace(/ /g,''));
           var gifData = gifTest;
           // Setting weather gif source to gif url
           $("#weatherGif").attr("src", gifData.data[0].images.original.url);
@@ -50,7 +49,7 @@ function loadLocation(Location) {
           // Can check the source here
           console.log(gifData.data[0].images.original.url);
           // Can check the url request here
-          console.log("https://api.giphy.com/v1/gifs/search?api_key=fbIf1ckwS6OC3tiJr1DgcpOH3SHQcgT1&limit=1&offset=0&rating=G&lang=en&q=" + $("#resultWeather").text().trim().replace(/ /g,''));
+          console.log("https://api.giphy.com/v1/gifs/search?api_key=fbIf1ckwS6OC3tiJr1DgcpOH3SHQcgT1&limit=1&offset=0&rating=G&lang=en&q=" + $("#resultWeather").text().trim().replace(/\s+/g, '-'));
         });
       }, 
       1000);
