@@ -1,19 +1,28 @@
 // BangkokDangerus- scrapped all NYT code in favor of simple ajax to get api working will build URL builder next 
+$(document).ready(function(){
 var input = document.getElementById('autocomplete');
       var autocomplete = new google.maps.places.Autocomplete(input,{types: ['(cities)']});
       google.maps.event.addListener(autocomplete, 'place_changed', function(){
          var place = autocomplete.getPlace();
          console.log(response);
-      })
+      });
 
-var finalLoc = "London,uk";
+//Pull user input and transfer to ajax url
+$("#run-search").on("click", function(){
+  event.preventDefault();
+  var finalLoc = $("#autocomplete").val();
+  //var finalLoc="London,UK";
+  console.log(finalLoc);
+  loadLocation(finalLoc);
+});
+
 console.log($("#result").text());
-function loadLocation() {
+function loadLocation(Location) {
   
     
 
     $.ajax({
-        url: "https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=67f7b70a57885cc5e9a93ac4280e436f",
+        url: `https://api.openweathermap.org/data/2.5/weather?q=${Location}&appid=67f7b70a57885cc5e9a93ac4280e436f`,
       }).done(function(theWeather) {
         var data = theWeather;
         // Sets result div text to the city name
@@ -48,4 +57,5 @@ function loadLocation() {
              
 };
 
-this.loadLocation();
+//this.loadLocation();
+});
