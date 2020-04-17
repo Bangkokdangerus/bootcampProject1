@@ -11,6 +11,7 @@ $("#run-search").on("click", function(){
   event.preventDefault();
   var finalLoc = $("#autocomplete").val();
   $("#weatherGif").removeClass("invisible");
+  $("#anid").removeClass("invisible");
   console.log(finalLoc);
   loadLocation(finalLoc);
 });
