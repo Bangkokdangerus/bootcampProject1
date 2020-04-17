@@ -4,14 +4,13 @@ var input = document.getElementById('autocomplete');
       var autocomplete = new google.maps.places.Autocomplete(input,{types: ['(cities)']});
       google.maps.event.addListener(autocomplete, 'place_changed', function(){
          var place = autocomplete.getPlace();
-         console.log(response);
       });
 
 //Pull user input and transfer to ajax url
 $("#run-search").on("click", function(){
   event.preventDefault();
   var finalLoc = $("#autocomplete").val();
-  //var finalLoc="London,UK";
+  $("#weatherGif").removeClass("invisible");
   console.log(finalLoc);
   loadLocation(finalLoc);
 });
