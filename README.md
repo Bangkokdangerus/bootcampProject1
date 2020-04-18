@@ -1,7 +1,7 @@
 # Project 1
 
 
-* 4/9/20 I started with an adaptation of nyt search project but ended up upending most of it but i am uploading this while I work because nothing is in the github rn. I am going to probably work with this till i get the Openweather stuff working in the script and then add the gify stuff but if nobody has started i reccomend trimming this till we get the api/ scrripts working for the base function then we can mess around and add other funcitons as time goes by
+Application finished!
 
 
 
