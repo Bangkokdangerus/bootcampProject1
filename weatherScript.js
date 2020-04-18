@@ -26,13 +26,13 @@ function loadLocation(Location) {
       }).done(function(theWeather) {
         var data = theWeather;
         // Sets result div text to the city name
-        $("#result").text(data.name);
+        $("#result").text(data.name + " ");
         // Sets the weather result div text to the weather description
-        $("#resultWeather").text(data.weather[0].description);
+        $("#resultWeather").text(data.weather[0].description + " ");
         // Sets main result text to the temperature
-        $("#resultMain").text(((data.main.temp - 273.15) * 9/5 + 32).toFixed(2) + " °F");
+        $("#resultTemp").text(((data.main.temp - 273.15) * 9/5 + 32).toFixed(2) + " °F ");
         // Sets wind result text to the wind speed
-        $("#resultWind").text(data.wind.speed + " MPH");
+        $("#resultWind").text(data.wind.speed + " MPH ");
         // Shows response
         console.log(data);
       });
